@@ -3,36 +3,66 @@
     {
       "path": "pages/home/home",
       "style": {
-        "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
 
     }, {
       "path": "pages/community/community",
       "style": {
-        "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
 
     }, {
       "path": "pages/store/store",
       "style": {
-        "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
 
     }, {
       "path": "pages/my/my",
       "style": {
-        "navigationBarTitleText": "",
         "enablePullDownRefresh": false
       }
     }
   ],
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [{
+                    "path" : "goods_detail/goods_detail",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "goods_cate/goods_cate",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "goods_list/goods_list",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+    }
+  ],
+  
   "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText":"Fitness",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText":"Fit",
+    "navigationBarBackgroundColor": "#7c67fb",
     "backgroundColor": "#FFFFFF",
     "app-plus": {
       "background": "#efeff4"
