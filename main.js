@@ -9,13 +9,23 @@ import { $http } from '@escook/request-miniprogram'
 // 在 uni-app 项目中，可以把 $http 挂载到 uni 顶级对象之上，方便全局调用
 uni.$http = $http
 // 配置请求根路径
-$http.baseUrl = 'https://www.uinav.com'
+// $http.baseUrl = 'https://www.uinav.com'
+$http.baseUrl = 'https://api-ugo-web.itheima.net'
 
 // 请求开始之前做一些事情
 $http.beforeRequest = function (options) {
   uni.showLoading({
     title: '数据加载中...',
   })
+  console.log(options)
+  console.log(store)
+  // 判断当前是否为有权限的接口
+  if(options.url.indexOf('/my/') !== -1) {
+    options.header = {
+      // 为请求头添加身份认证字段(即token)
+      Authorization: store.state.m_user.token
+    }
+  }
 }
 
 // 请求完成之后做一些事情
