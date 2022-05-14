@@ -84,6 +84,7 @@
         }
         // 发起请求，获取搜索建议列表
         const { data: res } = await uni.$http.get('/api/public/v1/goods/qsearch', { query: this.kw })
+        console.log(res)
         if (res.meta.status !== 200) return uni.$showMsg()
         this.searchResults = res.message
         
@@ -148,7 +149,7 @@
   .sugg-item {
     font-size: 12px;
     padding: 13px 0;
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #efeff4;
     display: flex;
     align-items: center;
     justify-content: space-between;

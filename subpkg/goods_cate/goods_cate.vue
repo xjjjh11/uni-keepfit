@@ -63,6 +63,7 @@
         if (res.meta.status !== 200) return uni.$showMsg()
         // 转存数据
         this.cateList = res.message
+        console.log(this.cateList)
       },
       // 保存当前active值
         activeChanged(i) {
@@ -104,7 +105,7 @@
         background-color: #FFFFFF;
         position: relative;
         
-        //渲染激活项左侧的红色指示边线
+        //渲染激活项左侧的紫色指示边线
         &::before {
           content: ' ';
           font-color: #7c67fb;
