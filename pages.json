@@ -92,6 +92,15 @@
                 }
                 
                 }
+                ,{
+                    "path" : "share_detail/share_detail",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
             ]
     }
   ],

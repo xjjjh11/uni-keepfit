@@ -74,8 +74,8 @@
             <view class="course-name">{{course.course_name}}</view>
             <view class="course-type-time">{{course.course_type}} · {{course.course_duration}}</view>
           </view>
-            <view class="save" @click="saveChange(isClick)">
-              <image src="../../static/home_icons/save.png" class="save-img" v-if="isClick"></image>
+            <view class="save" @click="saveChange(isSave)">
+              <image src="../../static/home_icons/save.png" class="save-img" v-if="!isSave"></image>
               <image src="../../static/home_icons/save-active.png" class="save-img" v-else></image>
               <view class="save-text" >收藏</view>
             </view>
@@ -204,8 +204,8 @@
         }],
         // 当前选中项的索引，默认让第一项被选中
         active: 0,
-        // 是否点击
-        isClick: false,
+        // 是否收藏
+        isSave: false,
       };
     },
     methods: {
@@ -250,8 +250,8 @@
       },
       
       // 改变收藏图标
-      saveChange(isClick) {
-        this.isClick = !isClick
+      saveChange(isSave) {
+        this.isSave = !isSave
       }
     }
   }
